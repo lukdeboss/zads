@@ -1,0 +1,17 @@
+
+
+
+
+
+
+get	zad/:id
+	id to wczesniej zdefiniowany punkt czasowy w poataci szyfrowej np ASDFASDF
+        bez niego wywala error
+        gdy sie nie zgadza ma odeslac smieciowe dane,
+        (szybkosc odpowiedzi powinna byc dobrana przez naturalny selekt ale 
+	zamiast niego zwraca smieci)
+
+post	zad/:id
+
+
+
