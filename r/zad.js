@@ -7,12 +7,18 @@ module.exports = {
 
 
 //========================================
+nnected to database
+express deprecated res.redirect(url, status): Use res.redirect(status, url) instead routes/zad.js:20:17
+/node/zad/node_modules/mysql/lib/protocol/Parser.js:80
+        throw err; // Rethrow non-MySQL errors
+        ^
+
 //========================================
     zadAdd: (req, res) => {
         let temat = req.body.temat;
         var teraz = Math.floor((new Date).getTime()/1000);
-        let query = "insert into zadania (nr,typp,temat) values (" + teraz +",'c','" + temat + "')";
-
+        let query = "insert into zadania (nr,typp,temat) values (" + teraz + ",'c','" + temat + "')";
+        console.log(query);
         db.query(query, (err, result) => {
             if (err) {
                 return res.status(500).send(err);
