@@ -66,12 +66,12 @@ app.get('/products/add', newProductPage);
 app.get('/products/edit/:id', editProductPage);
 app.get('/feature/edit/:id', editFeaturePage);
 app.get('/client/edit/:id', editClientForm);
-
 app.get('/products/feat', showProdFeatures);
 app.get('/feature/add/:id', featureAddPage);
 app.get('/edit/:id', editPlayerPage);
 app.get('/delete/:id', deletePlayer);
 app.get('/invoice/add', newInvoice);
+app.post('/zadtest', zadTest);
 app.post('/invoice/add', addingInvoice);
 app.post('/add', addPlayer);
 app.post('/products/add', productsAddPage);
