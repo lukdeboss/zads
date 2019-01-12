@@ -6,7 +6,7 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
-const {setup,glowna,zadPost} = require('./routes/zad');
+const {zadTest,setup,glowna,zadPost} = require('./routes/zad');
 const {getHomePage} = require('./routes/index');
 const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
 const {addClientPage, addClient, clientsPage, editClientForm, updateClient, getClientInfo} = require('./routes/client');
