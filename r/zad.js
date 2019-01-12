@@ -11,7 +11,7 @@ module.exports = {
     zadAdd: (req, res) => {
         let temat = req.body.temat;
         var teraz = Math.floor((new Date).getTime()/1000);
-        let query = "insert into zadania (nr,typp,temat) values (teraz,'c','" + temat + "')";
+        let query = "insert into zadania (nr,typp,temat) values (" + teraz +",'c','" + temat + "')";
 
         db.query(query, (err, result) => {
             if (err) {
