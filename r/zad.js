@@ -7,11 +7,6 @@ module.exports = {
 
 
 //========================================
-nnected to database
-express deprecated res.redirect(url, status): Use res.redirect(status, url) instead routes/zad.js:20:17
-/node/zad/node_modules/mysql/lib/protocol/Parser.js:80
-        throw err; // Rethrow non-MySQL errors
-        ^
 
 //========================================
     zadAdd: (req, res) => {
