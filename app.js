@@ -45,6 +45,7 @@ app.use(bodyParser.json()); // parse form data client
 app.use(express.static(path.join(__dirname, 'public'))); // configure express to use public folder
 app.use(fileUpload()); // configure fileupload
 
+
 // routes for the app
 
 app.get('/zad', glowna);
