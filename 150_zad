@@ -1,0 +1,16 @@
+
+
+
+drop table if exists zadania;
+create table if not exists `zadania` (
+`nr` int(11) not null,
+`typp` char(3) not null,
+`zakoncz` int(11),
+`priorytet` int(5),
+`temat` varchar(255) NOT NULL,
+PRIMARY KEY ( `nr` )
+) ENGINE=InnoDB  DEFAULT CHARSET=latin2 AUTO_INCREMENT=1;
+
+insert into zadania (nr,typp,zakoncz,temat) values
+  ( 123123123,'c',234234243,'jakist tam temat');
+
