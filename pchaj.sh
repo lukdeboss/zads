@@ -11,5 +11,4 @@ git add .
 git commit -m "$info"
 git push
 
-s4 /node/zad/ put parms.sh
-
+s4 /l/repos/nodejs_zads put parms.sh
