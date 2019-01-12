@@ -8,6 +8,20 @@ module.exports = {
 
 //========================================
 //========================================
+    zadAdd: (req, res) => {
+        let temat = req.body.temat;
+        var teraz = Math.floor((new Date).getTime()/1000);
+        let query = "insert into zadania (nr,typp,temat) values (teraz,'c','" + temat + "')";
+
+        db.query(query, (err, result) => {
+            if (err) {
+                return res.status(500).send(err);
+            }
+            res.redirect('/jsonf.ejs', {
+            numer: teraz
+            });
+        });
+    },
 //========================================
    zadTest: (req, res) => {
           let costam = req.body.name;

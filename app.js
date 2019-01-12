@@ -6,7 +6,7 @@ const mysql = require('mysql');
 const path = require('path');
 const app = express();
 
-const {zadTest,setup,glowna,zadPost} = require('./routes/zad');
+const {zadAdd,zadTest,setup,glowna,zadPost} = require('./routes/zad');
 const {getHomePage} = require('./routes/index');
 const {addPlayerPage, addPlayer, deletePlayer, editPlayer, editPlayerPage} = require('./routes/player');
 const {addClientPage, addClient, clientsPage, editClientForm, updateClient, getClientInfo} = require('./routes/client');
@@ -71,6 +71,7 @@ app.get('/feature/add/:id', featureAddPage);
 app.get('/edit/:id', editPlayerPage);
 app.get('/delete/:id', deletePlayer);
 app.get('/invoice/add', newInvoice);
+app.post('/zad/add', zadAdd);
 app.post('/zadtest', zadTest);
 app.post('/invoice/add', addingInvoice);
 app.post('/add', addPlayer);
