@@ -10,6 +10,7 @@ module.exports = {
 //========================================
 //========================================
    zadTest: (req, res) => {
+          console.log(req);
           res.render('jsonf.ejs', {
             title: "Church Invoicing | ClientPage"
           });
