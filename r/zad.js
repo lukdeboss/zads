@@ -58,7 +58,8 @@ module.exports = {
 //========================================
 
 glowna: (req, res) => {
-
+       let cli = req.params.cli;
+       console.log("cli: ".cli);
        let query = "select zakoncz,nr,typp,temat from zadania order by zakoncz";
        db.query(query, (err, result) => {
           if (err) {
@@ -171,6 +172,7 @@ glowna: (req, res) => {
     },
 
 
+//========================================
     productsAddPage: (req, res) => {
         let message = '';
         let name = req.body.product;
@@ -215,6 +217,7 @@ glowna: (req, res) => {
         });
     },
 
+//========================================
     editProductPage: (req, res) => {
         let pid = req.params.id;
         console.log('e8365 editProductPage pid: ' + pid );
@@ -233,6 +236,7 @@ glowna: (req, res) => {
         });
     },
 
+//========================================
     editProduct: (req, res) => {
         let pid = req.params.id;
         let name = req.body.name;
@@ -247,6 +251,7 @@ glowna: (req, res) => {
         });
     },
 
+//========================================
     deletePlayer: (req, res) => {
         let playerId = req.params.id;
         let getImageQuery = 'SELECT image from `players` WHERE id = "' + playerId + '"';
