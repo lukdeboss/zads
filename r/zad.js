@@ -59,7 +59,7 @@ module.exports = {
 
 glowna: (req, res) => {
        let cli = req.params.cli;
-       console.log("cli: ".cli);
+       console.log("i3465 cli: ".cli);
        let query = "select zakoncz,nr,typp,temat from zadania order by zakoncz";
        db.query(query, (err, result) => {
           if (err) {
